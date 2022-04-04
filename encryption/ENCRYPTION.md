@@ -6,7 +6,7 @@ This document is meant to describe the rationale behind the **calc.pw password c
 
 The calc.pw key expansion can be described as a salted password-based key derivation function whereby a single strong **password** is combined with a service-dependent indiviudal **information** to generate a stream of pseudo-random bytes. For each service the same **password** is used while the **information** changes.
 
-![calc.pw key expansion](https://github.com/yahesh/calcpw.docs/raw/master/drawio/dist/calcpw.png)
+![calc.pw key expansion](https://github.com/yahesh/calcpw.docs/raw/main/drawio/dist/calcpw.png)
 
 ### Key derivation
 
