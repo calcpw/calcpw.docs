@@ -48,7 +48,7 @@ The calc.pw password encoding consumes pseudo-random bytes extracted  from the [
 
 ### Definition
 
-A character set is defined as a collection of single characters and character ranges (e.g. `0-9` or `A-Z` or `a-z`). A character set consists of one or more character groups (e.g. `A-Za-z`) which are taken into account during the [character set enforcement](character-set-enforcement).
+A character set is defined as a collection of single characters and character ranges (e.g. `0-9` or `A-Z` or `a-z`). A character set consists of one or more character groups (e.g. `A-Za-z`) which are taken into account during the [enforcement](#enforcement).
 
 **Examples:**
 
