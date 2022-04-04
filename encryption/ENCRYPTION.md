@@ -44,7 +44,7 @@ The calc.pw key expansion has passed all dieharder tests. However the `sts_seria
 
 ## calc.pw Password Encoding
 
-The calc.pw password encoding consumes pseudo-random bytes extracted  from the [calc.pw key expansion](#calc-pw-key-expansion) and converts to characters as specified by a given **character set**.
+The calc.pw password encoding consumes pseudo-random bytes extracted  from the [calc.pw key expansion](#calcpw-key-expansion) and converts to characters as specified by a given **character set**.
 
 ### Definition
 
