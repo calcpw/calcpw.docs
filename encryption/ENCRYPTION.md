@@ -10,7 +10,7 @@ The calc.pw key expansion can be described as a salted password-based key deriva
 
 ### Key derivation
 
-The key derivation is done using [PBKDF2](https://www.ietf.org/rfc/rfc2898.txt) with [SHA-256](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) as the hash algorithm, the **information** as the salt, the **password** and an iteration count that will depend on the computing power of the designated hardware (currently the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/specifications/) with an [RP2040](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html) microcontroller). The result is a 32 byte pseudo-random key.
+The key derivation is done using [PBKDF2](https://www.ietf.org/rfc/rfc2898.txt) with [SHA-256](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf) as the hash algorithm, the **information** as the salt, the **password** and an iteration count that will depend on the computing power of the designated hardware (the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/specifications/) with an [RP2040](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html) microcontroller). The result is a 32 byte pseudo-random key.
 
 ### Counter derivation
 
@@ -79,7 +79,7 @@ A character set is normalized so that the reproducibility of the calc.pw passwor
 
 ### Flattening
 
-A character set is normalized so that the reproducibility of the calc.pw password calculation is improved. Furthermore, flattening allows the character set to be represented as a one-dimensional array, leading to time-constant element access. The characters **within** the character groups are put into a single character group. Then they are sorted by their ISO 8859-1 value and de-duplicated.
+A character set is flattened so that the reproducibility of the calc.pw password calculation is improved. Furthermore, flattening allows the character set to be represented as a one-dimensional array, leading to time-constant element access. The characters **within** the character groups are put into a single character group. Then they are sorted by their ISO 8859-1 value and de-duplicated.
 
 #### Examples:
 
@@ -97,7 +97,7 @@ A character set is normalized so that the reproducibility of the calc.pw passwor
 
 ### Encoding
 
-The encoding of a extracted pseudo-random byte of the calc.pw key expansion takes place through the following command, where `$char` is the encoded character, `$byte` is the extracted pseudo-random byte, `$charset[]` is an array containing the flattened character set, `sizeof($charset)` is the number of characters contained in the flattened character set and `floor()` returns the integer part of a float.
+The encoding of an extracted pseudo-random byte of the calc.pw key expansion takes place through the following command, where `$char` is the encoded character, `$byte` is the extracted pseudo-random byte, `$charset[]` is an array containing the flattened character set, `sizeof($charset)` is the number of characters contained in the flattened character set and `floor()` returns the integer part of a float.
 
 ```
 if ($byte < (floor(256 / sizeof($charset))) * sizeof($charset)) {
