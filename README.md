@@ -36,4 +36,4 @@ The calc.pw password encoding has passed the modulo bias test.
 
 ## screenshots
 
-Several screenshots had to be taken in order to get [calcpw.ios](https://github.com/yahesh/calcpw.ios) onto the [App Store](https://apps.apple.com/de/app/calc-pw/id1618770594).
+Several screenshots had to be taken in order to get [calcpw.ios](https://github.com/yahesh/calcpw.ios) onto the [App Store](https://apps.apple.com/de/app/calc-pw/id1618770594). The [AppMockUp Studio](https://studio.app-mockup.com) was used for generating the screenshot images.
