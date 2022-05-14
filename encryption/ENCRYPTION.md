@@ -117,7 +117,7 @@ The following factors have contributed to the selection of the described passwor
 
 2. calc.pw will have a keypad-based interface. To improve the reproducibility of the password encoding, a given character set is normalized and flattened to prevent different entries of the character set by the user from producing different passwords as far as possible.
 
-3. Limiting characters to the ISO 8859-1 character encoding is sufficient **for now** as calc.pw will have a keybad-based interface and thus will have to be limited to a restricted character set anyway.
+3. Limiting characters to the ISO 8859-1 character encoding is sufficient **for now** as calc.pw will have a keypad-based interface and thus will have to be limited to a restricted character set anyway.
 
 4. As random values are mapped to a restricted character set, rejection sampling is used during the encoding to prevent modulo bias. Another possibility would have been to Base64-encode the pseudo-random bytes, drop the special characters (`/` and `+`) and introduce required characters afterwards. However, using a user-defined character set and using rejection sampling as well as enforcement was considered to be a cleaner implementation.
 
