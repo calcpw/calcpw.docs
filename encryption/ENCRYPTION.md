@@ -34,7 +34,7 @@ The following factors have contributed to the selection of the described key exp
 
 ### Verification
 
-To ensure the randomness distribution of the calc.pw key expansion, a full [dieharder](https://webhome.phy.duke.edu/~rgb/General/dieharder.php) run has been executed against [calcpw.php](https://github.com/yahesh/calcpw.php). The results can be found in the file [`dieharder/dist/calcpw.txt`](https://github.com/yahesh/calcpw.docs/blob/master/dieharder/dist/calcpw.txt). The dieharder run was executed with the following command and version **3.31.1** of dieharder, so the results should be reproducible:
+To ensure the randomness distribution of the calc.pw key expansion, a full [dieharder](https://webhome.phy.duke.edu/~rgb/General/dieharder.php) run has been executed against [calcpw.php](https://github.com/yahesh/calcpw.php) with low-entropy input. The results can be found in the file [`dieharder/dist/calcpw.txt`](https://github.com/yahesh/calcpw.docs/blob/master/dieharder/dist/calcpw.txt). The dieharder run was executed with the following command and version **3.31.1** of dieharder, so the results should be reproducible:
 
 ```
 $ ./calcpw.php --dieharder "password" "information" | dieharder -g 200 -a
