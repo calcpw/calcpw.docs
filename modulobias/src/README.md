@@ -1,6 +1,6 @@
 # modulobias.php
 
-Copyright (c) 2022-2023, Yahe  
+Copyright (c) 2022-2024, Yahe  
 All rights reserved.
 
 ## usage
