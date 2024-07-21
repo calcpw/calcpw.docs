@@ -6,7 +6,7 @@ This document is meant to describe the rationale behind the **calc.pw password c
 
 The calc.pw key expansion can be described as a salted password-based key derivation function whereby a single strong **password** is combined with a service-dependent individual **information** to generate a stream of pseudo-random bytes. For each service the same **password** is used while the **information** changes.
 
-![calc.pw key expansion](https://github.com/yahesh/calcpw.docs/raw/main/drawio/dist/calcpw.png)
+![calc.pw key expansion](https://github.com/calcpw/calcpw.docs/raw/main/drawio/dist/calcpw.png)
 
 ### Key derivation
 
@@ -34,7 +34,7 @@ The following factors have contributed to the selection of the described key exp
 
 ### Verification
 
-To ensure the randomness distribution of the calc.pw key expansion, a full [dieharder](https://webhome.phy.duke.edu/~rgb/General/dieharder.php) run has been executed against [calcpw.php](https://github.com/yahesh/calcpw.php) with low-entropy input. The results can be found in the file [`dieharder/dist/calcpw.txt`](https://github.com/yahesh/calcpw.docs/blob/master/dieharder/dist/calcpw.txt). The dieharder run was executed with the following command and version **3.31.1** of dieharder, so the results should be reproducible:
+To ensure the randomness distribution of the calc.pw key expansion, a full [dieharder](https://webhome.phy.duke.edu/~rgb/General/dieharder.php) run has been executed against [calcpw.php](https://github.com/calcpw/calcpw.php) with low-entropy input. The results can be found in the file [`dieharder/dist/calcpw.txt`](https://github.com/calcpw/calcpw.docs/blob/master/dieharder/dist/calcpw.txt). The dieharder run was executed with the following command and version **3.31.1** of dieharder, so the results should be reproducible:
 
 ```
 $ ./calcpw.php --dieharder "password" "information" | dieharder -g 200 -a
@@ -123,7 +123,7 @@ The following factors have contributed to the selection of the described passwor
 
 ### Verification
 
-To ensure the even distribution of the calc.pw password encoding, the script [`modulobias/src/modulobias.php`](https://github.com/yahesh/calcpw.docs/blob/master/modulobias/src/modulobias.php) has been developed and a modulo bias run has been executed against [calcpw.php](https://github.com/yahesh/calcpw.php). The results can be found in the file [`modulobias/dist/calcpw.txt`](https://github.com/yahesh/calcpw.docs/blob/master/modulobias/dist/calcpw.txt). The modulo bias run was executed with the following command and version **v0.1b0** of the script, so the results should be reproducible:
+To ensure the even distribution of the calc.pw password encoding, the script [`modulobias/src/modulobias.php`](https://github.com/calcpw/calcpw.docs/blob/master/modulobias/src/modulobias.php) has been developed and a modulo bias run has been executed against [calcpw.php](https://github.com/calcpw/calcpw.php). The results can be found in the file [`modulobias/dist/calcpw.txt`](https://github.com/calcpw/calcpw.docs/blob/master/modulobias/dist/calcpw.txt). The modulo bias run was executed with the following command and version **v0.1b0** of the script, so the results should be reproducible:
 
 ```
 $ ./calcpw.php --modulobias "password" "information" "0-9 A-Z a-z" | ./modulobias.php
